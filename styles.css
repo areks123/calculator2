@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* display: flex; */
+    height: 100vh;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background-color: #f4f4f4; */
+    background-color: rgb(255, 231, 134);
+}
+
+.main-content {
+    display: flex;
+    height: calc(100vh - 60px);
+    justify-content: center;
+    align-items: center;
+}
+
+#result, .container {
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #edc928;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.display {
+    margin-bottom: 10px;
+}
+
+#result {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+    /* background-color: #eee; */
+    background-color: rgb(255, 230, 156);
+    box-shadow: inset 2px 2px 5px rgba(242, 226, 178, 0.7), 
+                inset -2px -2px 5px rgba(255, 246, 198, 0.7);
+    margin-bottom: 20px;
+    height: 60px;
+    font-weight: bold;
+    font-size: 25px;
+    color: #87700b;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    grid-template-areas:
+         "ac c percent div"
+        "seven eight nine mult"
+        "four five six minus"
+        "one two three plus"
+        "zero zero equal equal";
+    ;
+}
+
+.equal {
+    grid-area: equal;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    background-color: rgb(250, 224, 92);
+}
+
+button[data-action] {
+    color: #87700b;
+}
+
+.keys button {
+    color: 
+}
+
+button:hover {
+    background-color: rgb(255, 230, 156);
+}
+
+button:focus {
+    outline: none;
+}
+
+footer {
+    color: #bd9d0d;
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+    display: block;
+}
